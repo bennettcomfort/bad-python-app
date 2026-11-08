@@ -112,3 +112,8 @@ def idor_profile():
 @app.route('/iframe-injection', methods=['GET'])
 def iframe_injection():
     return iframe_injection_page(request, app)
+
+@app.route('/sql-injection/search-v2', methods=['GET'])
+def sql_injection_search_v2():
+    from vulns.sql_injection.sql_injection_search_v2 import sql_injection_search_v2_page
+    return sql_injection_search_v2_page(request, app)
